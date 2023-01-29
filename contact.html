@@ -10,8 +10,8 @@
 	<title>Portfoilo Site</title>
 	<link href="images/favicon.ico" rel="icon" >
 	<link href="styles/main.css" rel="stylesheet" >
-	<style type="text/css">
-		section {
+	<style>
+		section,div {
 		margin: 20px;
 		display: inline-block;
 		}
@@ -33,7 +33,7 @@
 	<main >
 		
 		<section class="contact_info" style="width:95%;">
-			<p>Contact Me</p>
+			<h2>Contact Me</h2>
 			<span><strong>Phone:</strong></span> <span>xxx-xxx-xxxx</span>
 			<br>
 			<span><strong>Email:</strong></span> <span>xxxxx@ucsd.edu</span>
@@ -45,13 +45,14 @@
 			</aside>
 		</section>
 
-		<section class="travel_video">
+		<div class="travel_video">
 			<video controls height="500" width="500">
 				<source src="videos/videoplayback.mp4" type="video/mp4" />
 				<div class="error">Your browser does not support the video tag.</div>
 			</video>
-		</section>
-		<section class="contact_form">
+		</div>
+
+		<div class="contact_form">
 			<fieldset>
 				<legend>Contact Me:</legend>
 				<label for="fname">First name:</label>
@@ -61,8 +62,8 @@
 				<label for="email">Email:</label>
 				<input type="email" id="email" name="email"><br><br>
 				<label for="priority_level">Priority Level</label>
-  				<input list="priority_level" name="priority_lev" id="priority_lev">
-				<datalist id="priority_level">
+  				<input list="priority_lev" name="priority_level" id="priority_level">
+				<datalist id="priority_lev">
 					<option value="Emergency">
 					<option value="Very high">
 					<option value="High">
@@ -70,12 +71,12 @@
 					<option value="Low">
 				</datalist>
 				<br><br>
-				<label for="msg">Contact Message:</label><br>
+				<label for="input_msg">Contact Message:</label><br>
 				<textarea id="input_msg" name="msg" rows="10" cols="50"></textarea>
 				<input type="submit" value="Submit">
 			   </fieldset>
 
-		</section>
+			</div>
 	</main>
 
 	<footer>
