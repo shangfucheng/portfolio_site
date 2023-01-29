@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<meta charset="utf-8" />
+	<meta charset="utf-8" >
 	<meta name="description" content="Simple demo Web page for CSE 134B">
 	<meta name="keywords" content="HTML, CSS, JavaScript">
 	<meta name="author" content="" >
@@ -13,6 +13,12 @@
 </head>
 
 <body>
+	<style>
+		section,div {
+		margin: 20px;
+		display: inline-block;
+		}
+	</style>
 	<header>
 		<h1>shang's Portfoilo</h1>
 		<nav id="nav_bar"> 
@@ -29,17 +35,13 @@
 	</header>
 	<hr>
 	<main id="main_content">
-		<style>
-			section {
-			margin: 20px;
-			display: inline-block;
-			}
-		</style>
-		<h2>Recent Projects</h2>
+		
+		
 			<section class="project_demo">
+				<h2>Recent Projects</h2>
 				<div>
 					<a href="index.html" target="_self"> <img src="images/bear.png" alt="project1" height="400" width="400" ></a>
-					<a href="index.html" target="_self"> <img img src="images/triton.jpg" alt="Triton" height="400" width="400" ></a>
+					<a href="index.html" target="_self"> <img src="images/triton.jpg" alt="Triton" height="400" width="400" ></a>
 					<br>
 					<a href="https://ucsd.edu" target="_blank"><img src="images/ucsd.gif" alt="UCSD" height="177"
 						width="805"></a>
@@ -47,11 +49,13 @@
 			</section>
 
 			<section class="contact_block" >
+				<h2>Contact Me</h2>
 				<iframe src="contact.html" width="700" height="600"></iframe>
 			</section>
 			<hr>
 
 			<section class="education_block">
+				<h2>Past Experience</h2>
 				<canvas id="education_canvas" height="600" width="600">
 				</canvas>
 				<script>
@@ -71,16 +75,17 @@
 					ctx.strokeText("Web Developer at xxx 2027", 50, 400);
 				</script>
 			</section>
-			<section class="middle_circle">
+			<div class="middle_circle">
 				<svg width="200" height="200">
 					<circle cx="100" cy="100" r="50"
 					stroke="green" stroke-width="4" fill="yellow" />
 					<text fill="#000000" font-size="20" font-family="Verdana" x="55" y="106">Welcome</text>
 				  Sorry, your browser does not support inline SVG.
 				</svg>
-			</section>
+			</div>
 			
 			<section class="persona_diagram">
+				<h2>About Me</h2>
 				<img src="images/persona_diagram.png" alt="project1" height="600" width="600" >
 			</section>
 			
