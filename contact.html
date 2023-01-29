@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="description" content="Simple demo Web page for CSE 134B" />
+	<meta name="keywords" content="HTML, CSS, JavaScript" />
+	<meta name="author" content="" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Portfoilo Site</title>
+	<link href="images/favicon.ico" rel="icon" />
+	<link href="styles/main.css" rel="stylesheet" />
+</head>
+
+<body>
+	<header>
+		<h1>shang's Portfoilo</h1>
+		<nav id="nav_bar"> 
+			<button id="home_nav">HOME</button>
+			<button id="project_nav">PROJECTS</button>
+			<button id="aboutme_nav">ABOUT ME</button>
+			<button id="contact_nav">CONTACT</button>
+		</nav>
+	</header>
+	<hr>
+	<main >
+		<style type="text/css">
+			section {
+			margin: 20px;
+			display: inline-block;
+			}
+		</style>
+		<section class="contact_info" style="width:95%;">
+			<p>Contact Me</p>
+			<span><strong>Phone:</strong></span> <span>xxx-xxx-xxxx</span>
+			<br>
+			<span><strong>Email:</strong></span> <span>xxxxx@ucsd.edu</span>
+			<br>
+			<span><strong>Address:</strong></span> <span>xxxx street, San Diego CA 9xxxx</span>
+			<br>
+			<aside>
+				<p>Please feel free to contact me through the form below, email or text message.</p>
+			</aside>
+		</section>
+
+		<section class="travel_video">
+			<video controls height="500" width="500">
+				<source src="videos/videoplayback.mp4" type="video/mp4" />
+				<div class="error">Your browser does not support the video tag.</div>
+			</video>
+		</section>
+		<section class="contact_form">
+			<fieldset>
+				<legend>Contact Me:</legend>
+				<label for="fname">First name:</label>
+				<input type="text" id="fname" name="fname"><br><br>
+				<label for="lname">Last name:</label>
+				<input type="text" id="lname" name="lname"><br><br>
+				<label for="email">Email:</label>
+				<input type="email" id="email" name="email"><br><br>
+				<label for="priority_level">Priority Level</label>
+  				<input list="priority_level" name="priority_lev" id="priority_lev">
+				<datalist id="priority_level">
+					<option value="Emergency">
+					<option value="Very high">
+					<option value="High">
+					<option value="Medium">
+					<option value="Low">
+				</datalist>
+				<br><br>
+				<label for="msg">Contact Message:</label><br>
+				<textarea id="input_msg" name="msg" rows="10" cols="50"></textarea>
+				<input type="submit" value="Submit">
+			   </fieldset>
+
+		</section>
+	</main>
+
+	<footer>
+		<hr/>
+		<section id="links">
+			<h3>Useful Links</h2>
+			<ul>
+				<li><a href="http://tritonlink.ucsd.edu"><strong>TritonLink</strong></a></li>
+				<li><a href="http://canvas.ucsd.edu"><strong>Canvas</strong></a></li>
+				<li><a href="http://w3.org"><strong>W3</strong></a></li>
+			</ul>
+		</section>
+		<section id="social_links">
+			<h3>Social Links</h2>
+			<ul>
+				<li><a href=""><i>Linkdin</i></a></li>
+				<li><a href=""><i>Github</i></a></li>
+				<li><a href=""><i>Twitter</i></a></li>
+			</ul>
+		</section>
+		<section id="project_links">
+			<h3>Project Links</h2>
+			<ol>
+				<li><a href=""><b>project 1</b></a></li>
+				<li><a href=""><b>project 2</b></a></li>
+				<li><a href=""><b>project 3</b></a></li>
+				<li><a href=""><b>project 4</b></a></li>
+				<li><a href=""><b>project 5</b></a></li>
+			</ol>
+		</section>
+		<p>💯This page was made with &hearts; by Fucheng Shang 💯</p>
+	</footer>
+</body>
+
+</html>

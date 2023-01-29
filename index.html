@@ -10,98 +10,167 @@
 	<title>Portfoilo Site</title>
 	<link href="images/favicon.ico" rel="icon" />
 	<link href="styles/main.css" rel="stylesheet" />
-	<script>
-		window.addEventListener('load', function () {
-			let time = window.performance.timing,
-				complete = time.domComplete - time.domLoading;
-			document.getElementById('page-load-info').innerHTML = `<strong>Page Loaded in ${parseInt(complete)}ms
-			 on ${new Date().toLocaleString("en-US")}</strong>`;
-		});
-	</script>
 </head>
 
 <body>
 	<header>
 		<h1>shang's Portfoilo</h1>
-		<div id="nav_bar"> 
+		<nav id="nav_bar"> 
 			<button id="home_nav">HOME</button>
 			<button id="project_nav">PROJECTS</button>
 			<button id="aboutme_nav">ABOUT ME</button>
 			<button id="contact_nav">CONTACT</button>
-		</div>
-		
-		<section id="user-info-component">
-			<div id="user-info" style="display: none;">
-				<output id="name-info">&nbsp;</output>
-				<br />
-				<output id="major-info">&nbsp;</output>
-				<hr />
-				<br />
-				<!-- Inline Javascript Handlers used here for demonstration only -->
-				<section class="intro-text">
-					<label>My name is <input id="name-input" type="text" autocomplete="name" autofocus maxlength="30" placeholder="Your Name"></label>
-					<br />
-					<label>My major is <input id="major-input" type="text" maxlength="30" placeholder="Your Major"></label>
-				</section>
-	
-				<button onclick="window.update();">Update</button>
-			</div>
-			<script>
-				document.getElementById('user-info').style.display = 'block';
-			</script>
-			<noscript class="error">Error: JavaScript is disabled or blocked.</noscript>
-		</section>
-
-
-		<section id="page-load-component">
-			<div id="load-info" style="display: none;">
-				<output id="page-load-info">Measuring...</output>
-			</div>
-			<script>
-				document.getElementById('load-info').style.display = 'block';
-			</script>
-			<noscript class="error">Error: JavaScript required for page timing measurement </noscript>
-		</section>
+			<audio controls>
+				<source src="videos/JRrcccc_Stay_Here_For_You.mp3" type="audio/mpeg">
+			  Your browser does not support the audio element.
+			  </audio>
+			  
+		</nav>
 	</header>
-
-	<main>
-		<h2>UCSD Images</h2>
-		<section class="img">
-			<img src="images/bear.png" alt="Warren Bear" height="430" width="700" />
-			<img src="images/triton.jpg" alt="Triton" height="430" width="700" />
-			<a href="https://ucsd.edu" target="_blank"><img src="images/ucsd.gif" alt="UCSD" height="177"
-				width="700"></a>
-			<br />
-			<section id="links">
-				<h2>Useful Links</h2>
-				<ul>
-					<li><a href="http://tritonlink.ucsd.edu">TritonLink</a></li>
-					<li><a href="http://canvas.ucsd.edu">Canvas</a></li>
-					<li><a href="http://w3.org">W3</a></li>
-				</ul>
+	<hr>
+	<main id="main_content">
+		<style type="text/css">
+			section {
+			margin: 20px;
+			display: inline-block;
+			}
+		</style>
+		<h2>Recent Projects</h2>
+			<section class="project_demo">
+				<div>
+					<a href="index.html" target="_self"> <img src="images/bear.png" alt="project1" height="400" width="400" /></a>
+					<a href="index.html" target="_self"> <img img src="images/triton.jpg" alt="Triton" height="400" width="400" /></a>
+					<br/>
+					<a href="https://ucsd.edu" target="_blank"><img src="images/ucsd.gif" alt="UCSD" height="177"
+						width="805"></a>
+				</div>
 			</section>
 
-		<section class="video">
-			<h2>UCSD Promo Video</h2>
-			<video controls height="393" width="700">
-				<source src="videos/videoplayback.mp4" type="video/mp4" />
-				<div class="error">Your browser does not support the video tag.</div>
-			</video>
-		</section>
+			<section class="contact_block" >
+				<iframe src="contact.html" frameborder="0" width="700" height="600"></iframe>
+				<!-- <canvas id="contact_canvas" height="600" width="600">
+					Contact Me:
+				</canvas>
+				<script>
+					var c = document.getElementById("contact_canvas");
+					var ctx = c.getContext("2d");
+					//Turn transparency on
+					ctx.globalAlpha = 0.2;
+					ctx.fillStyle = "green"; 
+					ctx.font = "bold 35px Arial";
+					ctx.fillRect(0, 0, 600, 600); 
+					ctx.fillText("Contact Me:", (c.width/2)-100, (c.height) - 500);
+					ctx.strokeText("Phone: xxx-xxx-xxxx", 50, 150);
+					ctx.strokeText("Email: xxxxx@ucsd.edu", 50, 200);
+					ctx.strokeText("Mail Addr: PO BOX xxxx", 50, 250);
+					ctx.strokeText("San Diego, CA 9xxxx", 150, 300);
+				</script> -->
+			</section>
+			<hr>
+
+			<section class="education_block">
+				<canvas id="education_canvas" height="600" width="600">
+				</canvas>
+				<script>
+					var c = document.getElementById("education_canvas");
+					var ctx = c.getContext("2d");
+					//Turn transparency on
+					ctx.globalAlpha = 0.4;
+					ctx.fillStyle = "brown"; 
+					ctx.font = "bold 35px Arial";
+					ctx.fillRect(0, 0, 600, 600); 
+					ctx.fillText("Education:", (c.width/2)-250, (c.height) - 500);
+					ctx.strokeText("UCSD: 2018-2023", 50, 150);
+					ctx.strokeText("UCLA: 2023-2024", 50, 200);
+					ctx.fillText("Work Experience:", (c.width/2)-250, (c.height) - 350);
+					ctx.strokeText("Hardware Engineer at xxx 2025", 50, 300);
+					ctx.strokeText("Software Engineer at xxx 2026", 50, 350);
+					ctx.strokeText("Web Developer at xxx 2027", 50, 400);
+				</script>
+			</section>
+			<section class="middle_circle">
+				<svg width="200" height="200">
+					<circle cx="100" cy="100" r="50"
+					stroke="green" stroke-width="4" fill="yellow" />
+					<text fill="#000000" font-size="20" font-family="Verdana" x="55" y="106">Welcome</text>
+				  Sorry, your browser does not support inline SVG.
+				</svg>
+			</section>
+			
+			<section class="persona_diagram">
+				<img src="images/persona diagram.png" alt="project1" height="600" width="600" />
+			</section>
+			
+			<hr>
+			<section class="demo_video">
+				<h3>Project Demo Video</h2>
+				<video controls height="500" width="1400">
+					<source src="videos/videoplayback.mp4" type="video/mp4" />
+					<div class="error">Your browser does not support the video tag.</div>
+				</video>
+			</section>
 			<br />
 
 		</section>
+		
+		<section>
+			<button onclick="showContent()">Click for More UCSD Bears</button>
+
+			<template>
+			<h2>UCSD Bear</h2>
+			<img src="images/bear.png" width="214" height="204">
+			</template>
+
+			<script>
+			function showContent() {
+				var temp = document.getElementsByTagName("template")[0];
+				var clon = temp.content.cloneNode(true);
+				document.getElementById("main_content").appendChild(clon);
+			}
+			</script>
+		</section>
+		  
 	</main>
 
 	<footer>
 		<hr/>
+		<section id="links">
+			<h3>Useful Links</h2>
+			<ul>
+				<li><a href="http://tritonlink.ucsd.edu" target="_blank"><strong>TritonLink</strong></a></li>
+				<li><a href="http://canvas.ucsd.edu" target="_blank"><strong>Canvas</strong></a></li>
+				<li><a href="http://w3.org" target="_blank"><strong>W3</strong></a></li>
+			</ul>
+		</section>
+		<section id="social_links">
+			<h3>Social Links</h2>
+			<ul>
+				<li><a href=""><i>Linkdin</i></a></li>
+				<li><a href=""><i>Github</i></a></li>
+				<li><a href=""><i>Twitter</i></a></li>
+			</ul>
+		</section>
+		<section id="project_links">
+			<h3>Project Links</h2>
+			<ol>
+				<li><a href=""><b>project 1</b></a></li>
+				<li><a href=""><b>project 2</b></a></li>
+				<li><a href=""><b>project 3</b></a></li>
+				<li><a href=""><b>project 4</b></a></li>
+				<li><a href=""><b>project 5</b></a></li>
+			</ol>
+		</section>
+		<section id="internal_link">
+			<h3>Internal Links</h2>
+			<ul>
+				<li><a href="./index.html" target="_self"><em>Home</em></a></li>
+				<li><a href="./projects.html" target="_blank"><em>Projects</em></a></li>
+				<li><a href="./aboutme.html" target="_blank"><em>About Me</em></a></li>
+				<li><a href="./contact.html" target="_blank"><em>Contact</em></a></li>
+			</ul>
+		</section>
 		<p>💯This page was made with &hearts; by Fucheng Shang 💯</p>
 	</footer>
-	<script type="module">
-		import { update } from './scripts/main.js';
-		window.update = update;
-	</script>
-	<script nomodule src="scripts/main-es5.js"></script>
 </body>
 
 </html>
