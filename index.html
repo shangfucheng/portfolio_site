@@ -10,125 +10,121 @@
 	<title>Portfoilo Site</title>
 	<link href="images/favicon.ico" rel="icon" >
 	<link href="styles/main.css" rel="stylesheet" >
-	<style>
-		section,div {
-		margin: 20px;
-		display: inline-block;
-		}
-	</style>
+	<script src="scripts/main.js"></script>
 </head>
 
 <body>
 
 	<header>
-		<h1>shang's Portfoilo</h1>
 		<nav id="nav_bar"> 
-			<button id="home_nav">HOME</button>
-			<button id="project_nav">PROJECTS</button>
-			<button id="aboutme_nav">ABOUT ME</button>
-			<button id="contact_nav">CONTACT</button>
-			<audio controls>
+			<input id="menu-toggle" type="checkbox" />
+			<label class='menu-button-container' for="menu-toggle">
+				<div class='menu-button'></div>
+			</label>
+			<ul class="menu">
+				<li class="nav_link"><a id="home_nav" href="#home">HOME</a></li>
+				<li class="nav_link"><a id="project_nav" href="#project">PROJECTS</a></li>
+				<li class="nav_link"><a id="aboutme_nav" href="#aboutme">ABOUT ME</a></li>
+				<li class="nav_link"><a id="contact_nav" href="#aboutme">CONTACT</a></li>
+			</ul>
+			<audio controls id="music" hidden>
 				<source src="videos/JRrcccc_Stay_Here_For_You.mp3" type="audio/mpeg">
 			  Your browser does not support the audio element.
-			  </audio>
-			  
+			</audio>
+
 		</nav>
-	</header>
-	<hr>
-	<main id="main_content">
-		
-		
-			<section class="project_demo">
-				<h2>Recent Projects</h2>
-				<div>
-					<a href="index.html" target="_self"> <img src="images/bear.png" alt="project1" height="400" width="400" ></a>
-					<a href="index.html" target="_self"> <img src="images/triton.jpg" alt="Triton" height="400" width="400" ></a>
-					<br>
-					<a href="https://ucsd.edu" target="_blank"><img src="images/ucsd.gif" alt="UCSD" height="177"
-						width="805"></a>
+
+		<div class="container-fluid">
+			<div class="row">
+				<div class="header-text">
+					<h2 class="header_title" >HEY, It's me, Fucheng.</h2>
+					<p class="header_describe">I'm an Undergraduat student at UCSD</p>
 				</div>
-			</section>
+			</div>
+		</div>
+	</header>
+	
+	<main id="main_content">
 
-			<section class="contact_block" >
-				<h2>Contact Me</h2>
-				<iframe src="contact.html" width="700" height="600"></iframe>
-			</section>
-			<hr>
+		<h1 id="project">Projects demo</h1>
+		<div class="ray_tracing">
+			<div class="rt_desc"><h2>Final Project for CSE 167 - 2022</h2></div>
+			<a href="https://github.com/shangfucheng/Ray_Tracing" target="_blank"></a>
+		</div>
+		
 
-			<section class="education_block">
-				<h2>Past Experience</h2>
-				<canvas id="education_canvas" height="600" width="600">
-				</canvas>
-				<script>
-					var c = document.getElementById("education_canvas");
-					var ctx = c.getContext("2d");
-					//Turn transparency on
-					ctx.globalAlpha = 0.4;
-					ctx.fillStyle = "brown"; 
-					ctx.font = "bold 35px Arial";
-					ctx.fillRect(0, 0, 600, 600); 
-					ctx.fillText("Education:", (c.width/2)-250, (c.height) - 500);
-					ctx.strokeText("UCSD: 2018-2023", 50, 150);
-					ctx.strokeText("UCLA: 2023-2024", 50, 200);
-					ctx.fillText("Work Experience:", (c.width/2)-250, (c.height) - 350);
-					ctx.strokeText("Hardware Engineer at xxx 2025", 50, 300);
-					ctx.strokeText("Software Engineer at xxx 2026", 50, 350);
-					ctx.strokeText("Web Developer at xxx 2027", 50, 400);
-				</script>
-			</section>
-			<div class="middle_circle">
-				<svg width="200" height="200">
-					<circle cx="100" cy="100" r="50"
-					stroke="green" stroke-width="4" fill="yellow" />
-					<text fill="#000000" font-size="20" font-family="Verdana" x="55" y="106">Welcome</text>
-				</svg>
+		<section class="todo_list">
+			<a href="https://github.com/shangfucheng/cse110-fa22-group26" target="_blank"></a>
+			<h2 class="tolist_desc">TO-DO List Web App for CSE 110 - 2022</h2>
+		</section>
+
+		<div class="amazonflexbot">
+			<div class="amzbot_desc"><h2>Amazon Flex Bot - 2021</h2></div>
+			<a href="https://github.com/shangfucheng/AmazonFlexBot" target="_blank"></a>
+		</div>
+
+		<h1 id="aboutme">About Me</h1>
+		<section class="education_block">
+			<div class="about">
+				<h3>Education:</h3>
+				<p><strong>UCSD - 2021-present</strong></p>
+				<p><strong>Mt Sac. College - 2019-2021</strong></p>
+			</div>
+			<div class="about">
+				<h3>Field of Interest</h3>
+				<p>Computer Graphic/Animation</p>
+				<p>Computer Networks</p>
+				<p>Web Development</p>
+				<p>Network Security</p>
+			</div>
+			<div class="about">
+				<h3>Hobbies</h3>
+				<p>Soccer</p>
+				<p>Hiking</p>
+				<p>Movies/Animate</p>
+				<p>Sailing</p>
 			</div>
 			
-			<section class="persona_diagram">
-				<h2>About Me</h2>
-				<img src="images/persona_diagram.png" alt="project1" height="600" width="600" >
-			</section>
-			
-			<hr>
-			<section class="demo_video">
-				<h3>Project Demo Video</h3>
-				<video controls height="500" width="1400">
-					<source src="videos/videoplayback.mp4" type="video/mp4" >
-					<div class="error">Your browser does not support the video tag.</div>
-				</video>
-			</section>
-			<br>
-		
-		<section>
-			<h2>Generate Bears</h2>
-			<button onclick="showContent()">Click for More UCSD Bears</button>
-
-			<template>
-			<h2>UCSD Bear</h2>
-			<img src="images/bear.png" width="214" height="204">
-			</template>
-
-			<script>
-			function showContent() {
-				var temp = document.getElementsByTagName("template")[0];
-				var clon = temp.content.cloneNode(true);
-				document.getElementById("main_content").appendChild(clon);
-			}
-			</script>
 		</section>
+		<h1 id="contact">Contact Me</h1>
+		<div class="contact_form">
+			<fieldset>
+				<legend>Contact Me:</legend>
+				<label for="fname">First name:</label>
+				<input type="text" id="fname" name="fname"><br><br>
+				<label for="lname">Last name:</label>
+				<input type="text" id="lname" name="lname"><br><br>
+				<label for="email">Email:</label>
+				<input type="email" id="email" name="email"><br><br>
+				<label for="reason_of_contact">Reason of Contact</label>
+				  <input list="roc" name="reason_of_contact" id="reason_of_contact">
+				<datalist id="roc">
+					<option value="Work Opportunity">
+					<option value="Research Opportunity">
+					<option value="Grad School Info">
+					<option value="Personal Questions">
+					<option value="Just Chat">
+				</datalist>
+				<br><br>
+				<label for="input_msg">Contact Message:</label><br>
+				<textarea id="input_msg" name="msg" rows="5" cols="30"></textarea>
+				<button type="submit" value="Submit">Submit</button>
+			</fieldset>
+
+		</div>
+
+		<section class="demo_video">
+			<h3>UCSD Tour Video</h3>
+			<video controls height="500" width="1400" class="dmo_vd">
+				<source src="videos/videoplayback.mp4" type="video/mp4" >
+				<div class="error">Your browser does not support the video tag.</div>
+			</video>
+		</section>
+		<br>
 		  
 	</main>
 
 	<footer>
-		<hr>
-		<section id="links">
-			<h3>Useful Links</h3>
-			<ul>
-				<li><a href="http://tritonlink.ucsd.edu" target="_blank"><strong>TritonLink</strong></a></li>
-				<li><a href="http://canvas.ucsd.edu" target="_blank"><strong>Canvas</strong></a></li>
-				<li><a href="http://w3.org" target="_blank"><strong>W3</strong></a></li>
-			</ul>
-		</section>
 		<section id="social_links">
 			<h3>Social Links</h3>
 			<ul>
@@ -137,23 +133,14 @@
 				<li><a href=""><i>Twitter</i></a></li>
 			</ul>
 		</section>
-		<section id="project_links">
-			<h3>Project Links</h3>
-			<ol>
-				<li><a href=""><b>project 1</b></a></li>
-				<li><a href=""><b>project 2</b></a></li>
-				<li><a href=""><b>project 3</b></a></li>
-				<li><a href=""><b>project 4</b></a></li>
-				<li><a href=""><b>project 5</b></a></li>
-			</ol>
-		</section>
+
 		<section id="internal_link">
 			<h3>Internal Links</h3>
 			<ul>
-				<li><a href="./index.html" target="_self"><em>Home</em></a></li>
-				<li><a href="./projects.html" target="_blank"><em>Projects</em></a></li>
-				<li><a href="./aboutme.html" target="_blank"><em>About Me</em></a></li>
-				<li><a href="./contact.html" target="_blank"><em>Contact</em></a></li>
+				<li><a href="#nav_bar" target="_self"><em>Home</em></a></li>
+				<li><a href="#project" target="_self"><em>Projects</em></a></li>
+				<li><a href="#aboutme" target="_self"><em>About Me</em></a></li>
+				<li><a href="#aboutme" target="_self"><em>Contact</em></a></li>
 			</ul>
 		</section>
 		<p>💯This page was made with &hearts; by Fucheng Shang 💯</p>
