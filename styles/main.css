@@ -176,13 +176,6 @@ h2:first-letter{
     font-size: 200%;
 }
 
-header > audio{
-    position:absolute;
-    top:0px;
-    right: 0px;
-    bottom: 0px;
-}
-
 body {
     display: flexbox;
     width: 100%;
