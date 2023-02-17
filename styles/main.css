@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro&text=Tlegy');
 
 /*Header Style*/
 header{
@@ -8,7 +9,7 @@ header{
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover; /* Resize the background image to cover the entire container */
-    height:40vh;
+    height:50vh;
     overflow: auto;
 }
 
@@ -16,6 +17,7 @@ header > h1, h2{
     color: rgb(185, 239, 239);
     text-align: center;
     text-shadow: 2px 2px 3px rgb(242, 239, 239);
+    font-family: 'Source Code PrO', Consolas, "Andale Mono WT", "Lucida Console", Courier, monospace;
 }
 
 a{
@@ -102,7 +104,14 @@ a:hover{
     margin-top: 0px;
     transform: rotate(-405deg);
   }
-  
+
+  @media(min-width: 1200px){
+    .menu{
+      font-size: 170%;
+      margin-left: 3%;
+    }
+  }
+
   @media (max-width: 765px) {
     .menu-button-container {
       display: flex;
@@ -162,6 +171,7 @@ a:hover{
     left: 50%;
     transform: translate(-50%, -40%);
     color: rgb(215, 230, 236);
+    font-family: 'Source Code Pro', Impact, monospace;
 }
 
 @keyframes header_animation{
