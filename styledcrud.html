@@ -9,14 +9,22 @@
     <title>Native Dialog</title>
     <link href="images/favicon.ico" rel="icon" >
     <!-- <link href="styles/main.css" rel="stylesheet" > -->
-    <script type="module" src="scripts/blog.js"></script>
-    <script type="module" src="scripts/movieShadowDom.js"></script>
+    <script type="module" src="scripts/styledposts.js"></script>
+    <script type="module" src="scripts/styledMovieShadowDom.js"></script>
     <script type="text/javascript" src="scripts/DOMPurify/dist/purify.min.js"></script>
     <script type="module" src="scripts/customdialog.js"></script>
+    <!-- forawesome (good resource for finding icons, go to their website https://fontawesome.com/icons search and copy & paste html code to add icons)-->
+    <script
+    src="https://kit.fontawesome.com/8c6cfa6ebd.js"
+    crossorigin="anonymous"
+    ></script>  
 </head>
 <body>
-    <h1>Big List of Movies (part 3)</h1>
-    <div id="movies">
+    <h1 style="text-align: center; 
+                font-family: 'Source Code Pro', Impact, monospace;">
+        Big List of Movies (Part 4 Styled)
+    </h1>
+    <div id="movies" style="display: flexbox;">
         <p id="default"></p>
     </div>
     <dialog id="movie_dialog"></dialog>
