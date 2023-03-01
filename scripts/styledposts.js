@@ -10,7 +10,25 @@ function init() {
     loadMoviesFromDB(movieMap);
     movieRating();
     styleShadowDom();
+
+    /*Add basic Style*/
+    document.getElementById("default").style.textAlign = 'center';
+    document.getElementById("default").style.fontSize = 'x-large';
+    let btnDiv = document.getElementById('add_btn_div');
+    btnDiv.style.display = 'flex';
+    btnDiv.style.alignItems = 'cneter';
+    btnDiv.style.justifyContent = 'center';
     document.body.style.backgroundColor = "skyBlue";
+    let addBtn = document.getElementById('add_movie');
+    addBtn.style.cursor = 'pointer' ;
+
+    addBtn.onmouseover = (()=>{
+        addBtn.style.backgroundColor="orange";
+    });
+    addBtn.onmouseout = (()=>{
+        addBtn.style.backgroundColor = 'white';
+    });
+
 }
 
 /*Function that convert movieMap(map) to movieArry(array)

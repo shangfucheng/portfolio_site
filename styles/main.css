@@ -16,9 +16,17 @@ header{
 header > h1, h2{
     color: rgb(185, 239, 239);
     text-align: center;
-    text-shadow: 2px 2px 3px rgb(242, 239, 239);
+    /* text-shadow: 2px 2px 3px rgb(242, 239, 239); */
+    background: radial-gradient(
+    circle farthest-corner at center center,
+    #ccc,
+    #333
+  ) no-repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-family: 'Source Code PrO', Consolas, "Andale Mono WT", "Lucida Console", Courier, monospace;
 }
+
 
 a{
     transition: 0.5s ease;
@@ -188,12 +196,20 @@ h2:first-letter{
 
 body {
     display: flexbox;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     margin: 0;
     background-color: hsl(0, 2%, 8%);
     color: hsl(0, 5%, 81%);
     line-height: 1.5;
     font-family: 'Brush Script Std', cursive;
+    background: radial-gradient(
+      circle closest-corner at center 125px,
+      #222,
+      black 40%
+    ) no-repeat;
+    text-align: center;
   }
   
 .main_content {
@@ -403,3 +419,34 @@ footer ul{
 a[href*="#"]{
     color: aquamarine;
 } */
+
+#fun_cards{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 10px;
+  width: 100%;
+  margin: 10px;
+}
+
+.card{
+  height: 260px;
+  width: 100%;  
+  border-radius: 10px;
+  position: relative;
+  border: 1px solid rgba(255,255,255, 0.1);
+  cursor: pointer;
+  text-align: center;
+  place-items: center center;
+  /*Fallback if gradeints don't work */
+  background: #242325;
+  /*Linear gradient... */
+  background: 
+    radial-gradient(
+     at center, #3498db, #4b454d
+    );
+}
+
+.card:hover::before{
+  opacity: 1;
+}

@@ -31,7 +31,6 @@ class moviePost extends HTMLElement {
         `script[src*="https://kit.fontawesome.com/8c6cfa6ebd.js"]`
       );
       const id = setInterval(() => {
-        console.log('setInterval');
         const fontAwesomeFont = document.querySelector('#fa-v5-font-face');
         const fontAwesomeMain = document.querySelector('#fa-main');
         if (fontAwesomeScript && fontAwesomeFont && fontAwesomeMain) {
