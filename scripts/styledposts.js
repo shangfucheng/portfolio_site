@@ -81,7 +81,6 @@ function saveMoviesToStorage(savedMovies) {
 
 
 function getMoviesFromStorage() {
-    //check if "todoListDB" exist
     if (localStorage.getItem("movieDB")) {
         return JSON.parse(localStorage.getItem("movieDB"));
     } else {
@@ -95,7 +94,12 @@ function popDialog(mv){
     let movieDialog = document.getElementById("movie_dialog");
     const dialogForm = document.createElement('form');
     dialogForm.setAttribute("method", "dialog");
-
+    dialogForm.style.width = "500px";
+    dialogForm.style.height = "200px";
+    dialogForm.style.display = 'flexbox';
+    dialogForm.style.alignItems = 'center';
+    dialogForm.style.justifyContent = 'center';
+    dialogForm.style.textAlign = 'left';
     const titleTxt = document.createElement('label');
     titleTxt.innerHTML = `Title: `;
     const titleInputBox = document.createElement("input");
@@ -184,7 +188,10 @@ function popDialog(mv){
             saveMoviesToStorage(movieArry); 
         });
     }
-    
+    titleDiv.style.marginTop = '25px';
+    titleDiv.style.marginBottom = '20px';
+    yearDiv.style.marginBottom = '20px';
+    ratingSelec.style.marginBottom = '20px';
     const cancelBtn = document.createElement('button');
     cancelBtn.textContent = `Cancel`;
     cancelBtn.addEventListener("close",(event)=>{});
