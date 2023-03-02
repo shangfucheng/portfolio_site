@@ -425,8 +425,8 @@ a[href*="#"]{
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-gap: 10px;
-  width: 100%;
-  margin: 10px;
+  width: 98%;
+  margin: 13px;
 }
 
 .card{
