@@ -1,0 +1,2 @@
+The major change is I redid 'aboutme' block, by using radial-gradient color fading effect and mouseover event that triggers a light follows the mouse movement, also hide the text of each card(6 in total), and will show once mouse move over it.
+I also added google analystics to track the traffic of the site, which can be helpful to predict how many recruiters are interested about me.
