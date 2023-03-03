@@ -1,6 +1,6 @@
 window.addEventListener("DOMContentLoaded", init);
-var movieMap = new Map();
-var movieArry = [];
+let movieMap = new Map();
+let movieArry = [];
 // Starts the program, all function calls trace back here
 function init() {
     if(movieArry.length ==0 && movieMap.size==0) document.getElementById("default").innerHTML = `NO Movies currently liste.`;
