@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" >
+    <meta name="description" content="Simple demo Web page for CSE 134B">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="fucheng-shang" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>HW5-PART1</title>
+    <script src="scripts/httpRequest.js"></script>
+    <link href="images/favicon.ico" rel="icon" >
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.1/purify.min.js" integrity="sha512-TU4FJi5o+epsahLtM9OFRvH2gXmmlzGlysk9wtTFgbYbMvFzh3Cw1l3ubnYIvBiZCC/aurRHS408TeEbcuOoyQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+</head>
+    
+<body>
+    <form action="#" id="methodForm">
+        <label for="recoedID">ID:</label>
+        <input type="text" name="id" id="recoedID">
+        <label for="articleName">Article Name: </label>
+        <input type="text" name="article" id="articleName">
+        <label for="articleBody">Article Body: </label>
+        <textarea name="articleBody" id="articleBody" cols="30" rows="10"></textarea>
+        <p hidden id="date"></p>
+        <br><br><br>
+        <button id="getBtn" target="">Get</button>
+        <button id="postBtn">Post</button>
+        <button id="putBtn">Put</button>
+        <button id="deleteBtn">Delete</button>
+        <br>
+        <input type="radio" id="ajax" name="selectapi" value="ajax">
+        <label for="ajax">Ajax</label>
+        <input type="radio" id="fetch" name="selectapi" value="fetch">
+        <label for="fetch">Fetch</label><br>
+    </form>
+    <div>
+        <output id="response"></output>
+    </div>
+   
+
+</body>
+</html>
