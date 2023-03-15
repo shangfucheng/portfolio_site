@@ -1,18 +1,9 @@
-# CSE134B-SS20-HW4 IN JS branch
+# CSE134B-SS20-HW5 IN hw5 branch
 # Name: Fucheng Shang
 # PID: A17169286
-# website: https://gleeful-chimera-7a1d1c.netlify.app/
-
-
-# CSE134B-SS20-HW3 IN css branch
-# Name: Fucheng Shang
-# PID: A17169286
-# website: https://sunny-alpaca-3d65b1.netlify.app/
+# website: https://euphonious-bienenstitch-16abd4.netlify.app/methodtest.html
+# github: https://github.com/shangfucheng/portfolio_site/tree/hw5
 
 
 
-
-# CSE134B-SS20-HW2
-# Name: Fucheng Shang
-# PID: A17169286
-# website: https://eclectic-hotteok-9a340c.netlify.app/
+# I have done both Ajax and Fetch http request in this hw.

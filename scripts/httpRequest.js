@@ -134,7 +134,7 @@ function post(){
     Http.open("POST", url, true);
     Http.setRequestHeader(
         "Content-Type",
-        "application/x-www-form-urlencoded"
+        "application/x-www-form-urlencoded",
         );
     Http.send(formData);
 }
@@ -315,6 +315,8 @@ async function postFetch(){
         // credentials: "same-origin", // include, *same-origin, omit
         headers: {
         // "Content-Type": "application/json",
+        // 'Content-Type': 'text/html; charset=utf-8',
+        // 'Content-Type': 'multipart/form-data; boundary=something',
         'Content-Type': 'application/x-www-form-urlencoded',
         },
         body: formData,
