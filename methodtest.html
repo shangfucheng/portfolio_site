@@ -11,27 +11,53 @@
     <link href="images/favicon.ico" rel="icon" >
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.1/purify.min.js" integrity="sha512-TU4FJi5o+epsahLtM9OFRvH2gXmmlzGlysk9wtTFgbYbMvFzh3Cw1l3ubnYIvBiZCC/aurRHS408TeEbcuOoyQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
 </head>
+<style>
+    input[type=text], button,textarea {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    button:hover{
+        cursor: pointer;
+    }
+    div {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+</style>
+<body style="display:flexbox; background-color: rgba(104, 249, 1, 0.197);">
     
-<body>
+    <ul>
+        <li><a href="./methodtest.html">Part1</a></li>
+        <li><a href="./webcomponent.html">Part2</a></li>
+    </ul>
     <form action="#" id="methodForm">
-        <label for="recoedID">ID:</label>
-        <input type="text" name="id" id="recoedID">
-        <label for="articleName">Article Name: </label>
-        <input type="text" name="article" id="articleName">
-        <label for="articleBody">Article Body: </label>
-        <textarea name="articleBody" id="articleBody" cols="30" rows="10"></textarea>
-        <p hidden id="date"></p>
-        <br><br><br>
+        <label for="id">ID:</label>
+        <input type="text" name="id" id="id">
+        <label for="article_name">Article Name: </label>
+        <input type="text" name="article" id="article_name">
+        <label for="article_body">Article Body: </label>
+        <textarea name="article_body" id="article_body" cols="30" rows="10"></textarea>
+    </form>
+
+    <div>
         <button id="getBtn" target="">Get</button>
         <button id="postBtn">Post</button>
         <button id="putBtn">Put</button>
         <button id="deleteBtn">Delete</button>
-        <br>
+    </div>
+
+    <div class="apiSel">
         <input type="radio" id="ajax" name="selectapi" value="ajax">
         <label for="ajax">Ajax</label>
         <input type="radio" id="fetch" name="selectapi" value="fetch">
         <label for="fetch">Fetch</label><br>
-    </form>
+    </div>
     <div>
         <output id="response"></output>
     </div>
