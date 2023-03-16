@@ -91,9 +91,13 @@ function post(){
     const url='https://httpbin.org/post';
     let methodForm = document.querySelectorAll('input');
     let articleBody = document.querySelector('textarea');
-    const form = document.getElementById('methodForm');
-    const formData = new FormData(form);
 
+    let FD = {
+        'id': methodForm[0].value,
+        'article_name': methodForm[1].value,
+        'article_body': articleBody
+    }
+    FD = JSON.stringify(FD);
     // for([key, value] of formData) console.log(key, value);
     Http.onreadystatechange = (e) => {
         if(Http.readyState===XMLHttpRequest.DONE){
@@ -110,7 +114,7 @@ function post(){
                             for(let y in response[x]){
                                 text += "<tr>"
                                 text += "<th>" + y  + "</th>";
-                                text += "<td>" + response[x][y] + "</td>";
+                                text += "<td>" + JSON.stringify(response[x][y]) + "</td>";
                                 text += "</tr>";
                             }
                         }else{
@@ -136,7 +140,7 @@ function post(){
         "Content-Type",
         "application/x-www-form-urlencoded",
         );
-    Http.send(formData);
+    Http.send(FD);
 }
 
 function put(){
@@ -144,8 +148,12 @@ function put(){
     const url='https://httpbin.org/put';
     let methodForm = document.querySelectorAll('input');
     let articleBody = document.querySelector('textarea');
-    let form = document.querySelector('#methodForm');
-    const formData = new FormData(form);
+    let FD = {
+        'id': methodForm[0].value,
+        'article_name': methodForm[1].value,
+        'article_body': articleBody
+    }
+    FD = JSON.stringify(FD);
     
     Http.onreadystatechange = (e) => {
         if(Http.readyState===XMLHttpRequest.DONE){
@@ -188,7 +196,7 @@ function put(){
         "Content-Type",
         "application/x-www-form-urlencoded"
         );
-    Http.send(formData);
+    Http.send(FD);
 }
 
 function deletePost(){
@@ -305,8 +313,12 @@ function getFetch(){
 
 async function postFetch(){
     let url='https://httpbin.org/post';
-    let form = document.querySelector('#methodForm');
-    const formData = new FormData(form);
+    let FD = {
+        'id': methodForm[0].value,
+        'article_name': methodForm[1].value,
+        'article_body': articleBody
+    }
+    FD = JSON.stringify(FD);
     // Default options are marked with *
     fetch(url, {
         method: "POST", // *GET, POST, PUT, DELETE, etc.
@@ -319,7 +331,7 @@ async function postFetch(){
         // 'Content-Type': 'multipart/form-data; boundary=something',
         'Content-Type': 'application/x-www-form-urlencoded',
         },
-        body: formData,
+        body: FD,
         // redirect: "follow", // manual, *follow, error
         // referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
         // body: JSON.stringify(data), // body data type must match "Content-Type" header
@@ -359,9 +371,12 @@ async function postFetch(){
 }
 async function putFetch(){
     let url='https://httpbin.org/put';
-    let form = document.querySelector('#methodForm');
-    const formData = new FormData(form);
-
+    let FD = {
+        'id': methodForm[0].value,
+        'article_name': methodForm[1].value,
+        'article_body': articleBody
+    }
+    FD = JSON.stringify(FD);
     // Default options are marked with *
     fetch(url, {
         method: "PUT", // *GET, POST, PUT, DELETE, etc.
@@ -372,7 +387,7 @@ async function putFetch(){
         // "Content-Type": "application/json",
         'Content-Type': 'application/x-www-form-urlencoded',
         },
-        body: formData,
+        body: FD,
         // redirect: "follow", // manual, *follow, error
         // referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
         // body: JSON.stringify(data), // body data type must match "Content-Type" header
