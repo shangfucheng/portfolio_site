@@ -168,6 +168,7 @@ a:hover{
     animation-name: header_animation;
     animation-duration: 1s;
     height: auto;
+    color: #00BAF0;
 }
 .header_describe {
     font-size: 2rem;
@@ -359,23 +360,6 @@ h2, h3 {
     margin-bottom: 20px;
     text-align: center;
 }
-.education_block{
-    display: inline-block;
-    width: 100%;
-    margin-bottom: 30px;
-    background-color: rgb(28, 51, 78);
-}
-.education_block div{
-    float: left;
-    width: 20%;
-    height: auto;
-    margin-left: 20px;
-    text-align: center;
-}
-.about{
-    color: #eea849;
-    padding-left: 10%;
-}
 
 .dmo_vd{
     width: 100%;
@@ -430,7 +414,7 @@ a[href*="#"]{
 }
 
 .card{
-  height: 260px;
+  height: 280px;
   width: 100%;  
   border-radius: 10px;
   position: relative;
@@ -447,15 +431,20 @@ a[href*="#"]{
     );
 }
 
+.card > p{
+  font-size: clamp(10px, 1.7vw, 1.5rem); 
+  visibility: hidden;
+}
+
 .card:hover::before{
   opacity: 1;
 }
 
 /*From Codepen*/
 :root {  
-  --purple: rgb(140, 213, 193);
-  --violet: rgb(121, 147, 162);
-  --pink: rgb(19, 18, 18);
+  --skyBlue: rgb(140, 213, 193);
+  --lightGray: rgb(71, 146, 190);
+  --lightGreen: rgb(175, 228, 198);
 }
 
 @keyframes background-pan {
@@ -523,17 +512,17 @@ h1 > .magic > .magic-star > svg {
 }
 
 h1 > .magic > .magic-star > svg > path {
-  fill: var(--violet);
+  fill: var(--lightGray);
 }
 
 h1 > .magic > .magic-text {
   animation: background-pan 3s linear infinite;
   background: linear-gradient(
     to right,
-    var(--purple),
-    var(--violet),
-    var(--pink),
-    var(--purple)
+    var(--skyBlue),
+    var(--lightGray),
+    var(--lightGreen),
+    var(--skyBlue)
   );
   background-size: 200%;
   -webkit-background-clip: text;

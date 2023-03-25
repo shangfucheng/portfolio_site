@@ -93,6 +93,11 @@ function post(){
     let articleBody = document.querySelector('textarea');
     const form = document.getElementById('methodForm');
     const formData = new FormData(form);
+    let FD = {
+        id: methodForm[0].value,
+        article_name: methodForm[1].value,
+        articcle_body: articleBody.value
+    }
 
     // for([key, value] of formData) console.log(key, value);
     Http.onreadystatechange = (e) => {
@@ -136,7 +141,7 @@ function post(){
         "Content-Type",
         "application/x-www-form-urlencoded"
         );
-    Http.send(formData);
+    Http.send(FD);
 }
 
 function put(){
@@ -461,3 +466,28 @@ async function deleteFetch(){
       console.error("Error:", error);
     });
 }
+
+
+const express = require('express');
+const bodyParser = require('body-parser');
+const app = express();
+
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
+app.post('/sayhello', (req, res) => {
+    const name = req.body.name;
+    const message = `Hello ${name}`;
+
+    if (req.headers['sent-by'] === 'JavaScript') {
+        res.json({ message: message });
+    } else {
+        // super terrible short version here - use a template middleware for a better version
+        res.send(`<!doctype html><html><head><meta charset="utf-8"><title>Hello!</title></head><body><h1>${message}</h1></body></html>`);
+    }
+});
+
+const port = 3000;
+app.listen(port, () => {
+    console.log(`Server running on port ${port}`);
+});
