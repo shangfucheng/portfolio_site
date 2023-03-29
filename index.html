@@ -21,16 +21,49 @@
 </head>
 
 <body>
-	<header title="UCSD_Library">
+	<header>	
 		<nav id="nav_bar"> 
 			<a href=""><i class="fas fa-home"></i></a>
 			<a href="https://github.com/shangfucheng" target="_blank"><i class="fab fa-github"></i></a>
 			<a href="https://www.linkedin.com/in/fucheng-shang/" target="_blank"><i class="fab fa-linkedin"></i></a>
 		</nav>
 
-		<div class="container-fluid">
+		  <div class="menu-bg" id="menu-bg"></div>
+
+		<div class="stage">
+			<div class="layer"></div>
+			<div class="layer"></div>
+			<div class="layer"></div>
+			<div class="layer"></div>
+			<div class="layer"></div>
+			<div class="layer"></div>
+			<div class="layer"></div>
+			<div class="layer"></div>
+			<div class="layer"></div>
+			<div class="layer"></div>
+			<div class="layer"></div>
+			<div class="layer"></div>
+			<div class="layer"></div>
+			<div class="layer"></div>
+			<div class="layer"></div>
+			<div class="layer"></div>
+			<div class="layer"></div>
+			<div class="layer"></div>
+			<div class="layer"></div>
+			<div class="layer"></div>
+			<h2 class="header_title">Looking for a Full time Job in</h2>
+			<h2 class="header_title">SDE, Web dev, Networking or Computer Graphic</h2>
+		  </div>
+		 
+		  <style>
+			* *, *::before, *::after { 
+			  animation-play-state: running !important;
+			}
+		  </style>
+		  <script>window.setTimeout = null;</script>
+		<!-- <div class="container-fluid">
 			<div class="row">
-				<div class="header-text">
+				<div class="header-text header-text_loaded">
 					<h1>
 						<b style="color:rgb(47, 75, 77)">HEY, My name is </b>
 						<span class="magic">
@@ -54,10 +87,9 @@
 						
 					  </h1>
 					<h2 class="header_title" >Looking for a Full time Job in SDE, Web dev, Networking or Computer Graphic</h2>
-					<!-- <p class="header_describe">I'm an Undergraduate student at UCSD</p> -->
 				</div>
 			</div>
-		</div>
+		</div> -->
 	</header>
 	
 	<main id="main_content">
@@ -116,7 +148,7 @@
 		<br>
 
 		<div id="codeBlock">
-			<span>
+			<span class="code">
 				<pre style="float: left;color: black;">
 
 				1
@@ -154,6 +186,10 @@
 				33
 				34
 				35
+				36
+				37
+				38
+				39
 				</pre>
 				<div class="vl"></div>
 				<pre>
@@ -169,13 +205,13 @@
 		std::string Personality;
 	public:
 		FuchengShang(){
-			this->Name = Fucheng Shang;
-			this->Major = Computer Science;
-			this->Experience = {
+			<span class="highLight">this->Name</span> = Fucheng Shang;
+			<span class="highLight">this->Major</span> = Computer Science;
+			<span class="highLight">this->Experience</span> = {
 				"2016-2018 Autonotive Technician",
 				"2014-2018 SLS AUTO, LLC. Founder, Online Aftermarket parts Retail",
 			};
-			this->Skills = {
+			<span class="highLight">this->Skills</span> = {
 				"C", "C++", "Python", "Assembly language", "Java", 
 				"HTML", "JavaScript", "CSS", "Shell Script", "OpenCv", 
 				"Tensorflow", "Pytorch", "Kivy", "Git", "OpenGL", 
@@ -184,12 +220,12 @@
 				"TypeScript", "React", "JQuery",  "Node.js", "WireShark",
 				"CI/CD", "UI/UX", "Blender", "C#"
 			};
-			this->Personality = "I really enjoy learning, it makes me feel comfortable and 
+			<span class="highLight">this->Personality</span> = "I really enjoy learning, it makes me feel comfortable and 
 								satisfied when I mastered a skill. I am an introverted person
 								who enjoys socializing in small doses, and I tend to be more 
 								of a listener than a talker."; 
 
-			this->Hobbies = {"Soccer", "Hiking", "Gaming", "Sailing", 
+			<span class="highLight">this->Hobbies</span> = {"Soccer", "Hiking", "Gaming", "Sailing", 
 							"Singing(Terriable)", "Dad Jokes"}; 
 		}
 	}
@@ -201,32 +237,7 @@
 			<h1>Interested in Working with Me?</h1>
 			<a href="mailto:fuchengshang@gmail.com"><i class="fa fa-comments"></i>Send a Message</a>
 		</div>
-		<!-- </section>
-		<h1 id="contact">Contact Me</h1>
-		<div class="contact_form">
-			<fieldset>
-				<legend>Contact Me:</legend>
-				<form action="mailto:fuchengshang@gmail.com" method="post">
-				<label for="name">Name:</label>
-				<input type="text" id="name" name="name" placeholder="Name"><br><br>
-				<label for="email">Email:</label>
-				<input type="email" id="email" name="email" placeholder="Email"><br><br>
-				<label for="input_msg">Contact Message:</label><br>
-				<textarea id="input_msg" name="msg" rows="10" cols="30" placeholder="Message"></textarea>
-				<button type="submit" value="Submit">Submit</button>
-			</form>
-			</fieldset>
-		</div> -->
-		<!-- <br><br><br><br>
-		<section class="demo_video">
-			<h3>UCSD Tour Video</h3>
-			<video controls height="500" width="1400" class="dmo_vd">
-				<source src="videos/videoplayback.mp4" type="video/mp4" >
-				<div class="error">Your browser does not support the video tag.</div>
-			</video>
-		</section>
-		<br> -->
-		  
+
 	</main>
 
 	<footer>
