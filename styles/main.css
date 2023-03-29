@@ -2,9 +2,6 @@
 
 /*Header Style*/
 header{
-    position: relative;
-    width: auto;
-    height: auto;
     /* background-image: url('../images/ucsd_bgimg.jpeg'); */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
@@ -13,10 +10,16 @@ header{
     overflow: auto;
     padding: 2rem 0;
     border-bottom: 4px solid hsl(189, 55%, 61%);
+    background: radial-gradient(
+      circle closest-corner at center 50vh,
+      #62eaea,
+      rgb(16, 23, 26) 60%
+    ) no-repeat;
 }
 
+
+
 header > h1, h2{
-    /* color: rgb(185, 239, 239); */
     text-align: center;
     /* text-shadow: 2px 2px 3px rgb(242, 239, 239); */
     background: radial-gradient(
@@ -66,23 +69,25 @@ i.fab.fa-linkedin {
 }
 
 .header_title{
-    font-size: 1.8rem;
-    animation-name: header_animation;
-    animation-duration: 1s;
-    height: auto;
-    /* color: #00BAF0; */
+  font-size: 2rem;
+  animation-name: header_animation;
+  animation-duration: 1s;
+  height: auto;
 }
-.header_describe {
-    font-size: 2rem;
-}
+
 .header-text {
-    text-align: center;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -40%);
-    color: rgb(215, 230, 236);
-    font-family: 'Source Code Pro', Impact, monospace;
+  text-align: center;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  color: rgb(215, 230, 236);
+  font-family: 'Source Code Pro', Impact, monospace;
+}
+
+.header-text > h1{
+  width: 100%;
+  font-size: clamp(5vw, 7vw, min(10vw, 5rem));
 }
 
 @keyframes header_animation{
@@ -107,11 +112,6 @@ body {
     color: hsl(0, 5%, 81%);
     line-height: 1.5;
     font-family: 'Brush Script Std', cursive;
-    background: radial-gradient(
-      circle closest-corner at center 40vh,
-      #62eaea,
-      rgb(16, 23, 26) 40%
-    ) no-repeat;
     text-align: center;
   }
   
@@ -128,10 +128,6 @@ body {
 h1, h2, h3 {
     margin: 0;
     line-height: 1.25;
-}
-  
-h2, h3 {
-    color: hsl(151, 40%, 55%)
 }
 
 .ray_tracing{
@@ -486,7 +482,7 @@ h1 > .magic > .magic-text {
   cursor: text;
 }
 pre{
-  font-size: clamp(10px, 1.7vw, 1.3rem); ;
+  font-size: clamp(10px, 1.7vw, 1.3rem);
   white-space: pre-wrap;
   tab-size: 3;
 }
