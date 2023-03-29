@@ -45,23 +45,23 @@ a:hover{
 i.fas.fa-home {
   font-size: 8vmin;
   padding: 5vmin;
-  text-shadow: 5px 3px 2px rgb(125, 212, 134);
+  text-shadow: 3px 3px 2px rgb(125, 212, 134);
 }
 i.fab.fa-github {
   font-size: 8vmin;
   padding: 5vmin;
-  text-shadow: 5px 3px 2px rgb(125, 212, 134);
+  text-shadow: 3px 3px 2px rgb(125, 212, 134);
 }
 i.fab.fa-linkedin {
   font-size: 8vmin;
   padding: 5vmin;
-  text-shadow: 5px 3px 2px rgb(125, 212, 134);
+  text-shadow: 3px 3px 2px rgb(125, 212, 134);
 }
 
 .header_title{
   width: 100%;
   font-size: clamp(3vmin, 3vmin, 5vmin);
-  text-shadow: 2px 3px 1px rgb(111, 112, 2);
+  text-shadow: 1px 2px 1px rgb(111, 112, 2);
   font-family: "Pacifico", "Kaushan Script", Futura, "Roboto", "Trebuchet MS", Helvetica, sans-serif;
   position: relative;
   top: 25vmin;
