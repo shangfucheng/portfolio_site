@@ -15,6 +15,8 @@
 	<script type="text/javascript" src="node_modules/dompurify/dist/purify.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.1/purify.min.js" integrity="sha512-TU4FJi5o+epsahLtM9OFRvH2gXmmlzGlysk9wtTFgbYbMvFzh3Cw1l3ubnYIvBiZCC/aurRHS408TeEbcuOoyQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<script src="scripts/main.js"></script>
+	<!-- /*Code syntax highlight lib*/ -->
+	<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
 </head>
 
 <body>
@@ -36,7 +38,7 @@
 			<div class="row">
 				<div class="header-text">
 					<h1>
-						HEY,
+						<b style="color:rgb(47, 75, 77)">HEY, My name is </b>
 						<span class="magic">
 						  <span class="magic-star">
 							<svg viewBox="0 0 512 512">
@@ -53,11 +55,11 @@
 							<path d="M512 255.1c0 11.34-7.406 20.86-18.44 23.64l-171.3 42.78l-42.78 171.1C276.7 504.6 267.2 512 255.9 512s-20.84-7.406-23.62-18.44l-42.66-171.2L18.47 279.6C7.406 276.8 0 267.3 0 255.1c0-11.34 7.406-20.83 18.44-23.61l171.2-42.78l42.78-171.1C235.2 7.406 244.7 0 256 0s20.84 7.406 23.62 18.44l42.78 171.2l171.2 42.78C504.6 235.2 512 244.6 512 255.1z" />
 							</svg>
 						  </span>
-						  <span class="magic-text"> It's me, Fucheng</span>
+						  <span class="magic-text"><strong>Fucheng Shang</strong></span>
 						</span>
 						
 					  </h1>
-					<h2 class="header_title" >Looking for a full time job in Web dev, Networking or Computer Graphic</h2>
+					<h2 class="header_title" >Looking for a full time job in <b>Web dev</b>, <b>Networking</b> or <b>Computer Graphic</b></h2>
 					<!-- <p class="header_describe">I'm an Undergraduate student at UCSD</p> -->
 				</div>
 			</div>
@@ -87,7 +89,7 @@
 		<div id="fun_cards">
 			<div class="card">
 				<p style="font-size:2rem; color: burlywood;">Education:</p>
-				<p><strong>UCSD (BS) - 2021-2023</strong></p>
+				<p><strong>UCSD (BS) CS Major - 2021-2023</strong></p>
 				<p><strong>Mt Sac. College - 2019-2021</strong></p>
 			</div>
 			<div class="card">
@@ -105,51 +107,123 @@
 			<div class="card">
 				<p style="font-size:2rem; color: burlywood;">Tools & Libs</p>
 				<p>OpenGL, Houdini, Kivy, Pytorch</p>
-				<p>React, JQuery, TypeScript</p>
-				<p>Git, CI/CD, Vim, WireShark</p>
+				<p>React, JQuery, TypeScript, Node.js</p>
+				<p>Git, CI/CD, UI/UX, Vim, WireShark</p>
 			</div>
-			<div class="card">
+			<!-- <div class="card">
 				<p style="font-size:2rem; color: burlywood;">Hobbies</p>
 				<p>Soccer, Hiking, Gaming, Sailing</p>
 				<p>Singing(Terriable)</p>
 				<p>Dad Jokes</p>
-			</div>
-			<div class="card">
-				<p style="font-size:2rem; color: burlywood;">Experience</p>
-				<p>Automotive Technacian (1 Year)</p>
-				<p>SLS AUTO, LLC (Founder, Closed)</p>
-				<p>Experiencing.......</p>
-			</div>
+			</div> -->
+
 		</div>
-			
-		</section>
+		
+		<br>
+
+		<div id="codeBlock">
+			<span>
+				<pre style="float: left;color: black;">
+
+				1
+				2
+				3
+				4
+				5
+				6
+				7
+				8
+				9
+				10
+				11
+				12
+				13
+				14
+				15
+				16
+				17
+				18
+				19
+				20
+				21
+				22
+				23
+				24
+				25
+				26
+				27
+				28
+				29
+				30
+				31
+				32
+				33
+				34
+				35
+				</pre>
+				<div class="vl"></div>
+				<pre>
+				<code class="prettyprint">
+	/* More About Me */
+	class FuchengShang{
+	private:	
+		std::string Name;
+		std::string Major;
+		std::vector&ltstd::string&gt Experience; 
+		std::vector&ltstd::string&gt Skills;
+		std::vector&ltstd::string&gt Hobbies;
+		std::string Personality;
+	public:
+		FuchengShang(){
+			this->Name = Fucheng Shang;
+			this->Major = Computer Science;
+			this->Experience = {
+				"2016-2018 Autonotive Technician",
+				"2014-2018 SLS AUTO, LLC. Founder, Online Aftermarket parts Retail",
+			};
+			this->Skills = {
+				"C", "C++", "Python", "Assembly language", "Java", 
+				"HTML", "JavaScript", "CSS", "Shell Script", "OpenCv", 
+				"Tensorflow", "Pytorch", "Kivy", "Git", "OpenGL", 
+				"Systemverilog", "Quartus", "ISA Design", "Networking", 
+				"Houdini", "REST API", "Haskell", "Unix OS", "Threading",
+				"TypeScript", "React", "JQuery",  "Node.js", "WireShark",
+				"CI/CD", "UI/UX", "Blender", "C#"
+			};
+			this->Personality = "I really enjoy learning, it makes me feel comfortable and 
+								satisfied when I mastered a skill. I am an introverted person
+								who enjoys socializing in small doses, and I tend to be more 
+								of a listener than a talker."; 
+
+			this->Hobbies = {"Soccer", "Hiking", "Gaming", "Sailing", 
+							"Singing(Terriable)"", "Dad Jokes"}; 
+		}
+	}
+				</code>
+			</pre></span>
+		</div>
+
+		<div id="msg">
+			<h1>Interested in Working with Me?</h1>
+			<button>Send a Message</button>
+		</div>
+		<!-- </section>
 		<h1 id="contact">Contact Me</h1>
 		<div class="contact_form">
 			<fieldset>
 				<legend>Contact Me:</legend>
-				<label for="fname">First name:</label>
-				<input type="text" id="fname" name="fname"><br><br>
-				<label for="lname">Last name:</label>
-				<input type="text" id="lname" name="lname"><br><br>
+				<form action="mailto:fuchengshang@gmail.com" method="post">
+				<label for="name">Name:</label>
+				<input type="text" id="name" name="name" placeholder="Name"><br><br>
 				<label for="email">Email:</label>
-				<input type="email" id="email" name="email"><br><br>
-				<label for="reason_of_contact">Reason of Contact</label>
-				  <input list="roc" name="reason_of_contact" id="reason_of_contact">
-				<datalist id="roc">
-					<option value="Work Opportunity">
-					<option value="Research Opportunity">
-					<option value="Grad School Info">
-					<option value="Personal Questions">
-					<option value="Just Chat">
-				</datalist>
-				<br><br>
+				<input type="email" id="email" name="email" placeholder="Email"><br><br>
 				<label for="input_msg">Contact Message:</label><br>
-				<textarea id="input_msg" name="msg" rows="5" cols="30"></textarea>
+				<textarea id="input_msg" name="msg" rows="10" cols="30" placeholder="Message"></textarea>
 				<button type="submit" value="Submit">Submit</button>
+			</form>
 			</fieldset>
-
-		</div>
-
+		</div> -->
+		<!-- <br><br><br><br>
 		<section class="demo_video">
 			<h3>UCSD Tour Video</h3>
 			<video controls height="500" width="1400" class="dmo_vd">
@@ -157,7 +231,7 @@
 				<div class="error">Your browser does not support the video tag.</div>
 			</video>
 		</section>
-		<br>
+		<br> -->
 		  
 	</main>
 
@@ -171,15 +245,6 @@
 			</ul>
 		</section>
 
-		<section id="internal_link">
-			<h3>Internal Links</h3>
-			<ul>
-				<li><a href="#nav_bar" target="_self"><em>Home</em></a></li>
-				<li><a href="#project" target="_self"><em>Projects</em></a></li>
-				<li><a href="#aboutme" target="_self"><em>About Me</em></a></li>
-				<li><a href="#aboutme" target="_self"><em>Contact</em></a></li>
-			</ul>
-		</section>
 		<p>💯This page was made with &hearts; by Fucheng Shang 💯</p>
 	</footer>
 </body>
