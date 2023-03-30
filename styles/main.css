@@ -60,11 +60,11 @@ i.fab.fa-linkedin {
 
 .header_title{
   width: 100%;
-  font-size: clamp(3vmin, 3vmin, 5vmin);
-  text-shadow: 1px 2px 1px rgb(111, 112, 2);
+  font-size: clamp(1.6rem, 4vmin, 5vmin);
+  text-shadow: 1px 2px 1px rgb(1, 37, 26);
   font-family: "Pacifico", "Kaushan Script", Futura, "Roboto", "Trebuchet MS", Helvetica, sans-serif;
   position: relative;
-  top: 25vmin;
+  top: 20vmin;
   left: -50px;
   margin-left: 50px;
   margin-right: 50px;
@@ -506,146 +506,9 @@ i.fa.fa-comments{
   }
 }
 
-
-
-
-/*From Codepen*/
-/* :root {  
-  --skyBlue: rgb(42, 67, 61);
-  --lightGray: rgb(71, 146, 190);
-  --lightGreen: rgb(25, 61, 41);
-}
-
-@keyframes background-pan {
-  from {
-    background-position: 0% center;
-  }
-  
-  to {
-    background-position: -200% center;
+@media only screen and (max-width: 600px){
+  .header_title{
+    top: 33vmin;
+    left: -50px;
   }
 }
-
-@keyframes scale {
-  from, to {
-    transform: scale(0);
-  }
-  
-  50% {
-    transform: scale(1);
-  }
-}
-
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  
-  to {
-    transform: rotate(180deg);
-  }
-}
-
-
-h1 {
-  color: white;
-  font-family: "Rubik", sans-serif;
-  font-size: clamp(3em, 3vw, 3em);
-  font-weight: 500;
-  margin: 0px;
-  padding: 20px;
-  text-align: center;
-}
-
-h1 > .magic {
-  display: inline-block;
-  position: relative;
-}
-
-h1 > .magic > .magic-star {
-  --size: clamp(20px, 1.5vw, 30px);
-  
-  animation: scale 700ms ease forwards;
-  display: block;
-  height: var(--size);
-  left: var(--star-left);
-  position: absolute;
-  top: var(--star-top);
-  width: var(--size);
-}
-
-h1 > .magic > .magic-star > svg {
-  animation: rotate 1000ms linear infinite;
-  display: block;
-  opacity: 0.7;
-}
-
-h1 > .magic > .magic-star > svg > path {
-  fill: var(--lightGray);
-}
-
-h1 > .magic > .magic-text {
-  animation: background-pan 3s linear infinite;
-  background: linear-gradient(
-    to right,
-    var(--skyBlue),
-    var(--lightGray),
-    var(--lightGreen),
-    var(--skyBlue)
-  );
-  background-size: 200%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  white-space: nowrap;
-}
-
-
-#source-link {
-  top: 60px;
-}
-
-#source-link > i {
-  color: rgb(15, 238, 246);
-}
-
-#yt-link {  
-  top: 10px;
-}
-
-#yt-link > i {
-  color: rgb(239, 83, 80);
-}
-
-.meta-link {
-  align-items: center;
-  backdrop-filter: blur(3px);
-  background-color: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 6px;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
-  cursor: pointer;  
-  display: inline-flex;
-  gap: 5px;
-  left: 10px;
-  padding: 10px 20px;
-  position: fixed;
-  text-decoration: none;
-  transition: background-color 600ms, border-color 600ms;
-  z-index: 10000;
-}
-
-.meta-link:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.meta-link > i, .meta-link > span {
-  height: 20px;
-  line-height: 20px;
-}
-
-.meta-link > span {
-  color: white;
-  font-family: "Rubik", sans-serif;
-  transition: color 600ms;
-} */
