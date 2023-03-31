@@ -45,22 +45,22 @@ a:hover{
 i.fas.fa-home {
   font-size: 8vmin;
   padding: 5vmin;
-  text-shadow: 3px 3px 2px rgb(125, 212, 134);
+  text-shadow: 3px 3px 2px rgb(9, 9, 9);
 }
 i.fab.fa-github {
   font-size: 8vmin;
   padding: 5vmin;
-  text-shadow: 3px 3px 2px rgb(125, 212, 134);
+  text-shadow: 3px 3px 2px rgb(9, 10, 9);
 }
 i.fab.fa-linkedin {
   font-size: 8vmin;
   padding: 5vmin;
-  text-shadow: 3px 3px 2px rgb(125, 212, 134);
+  text-shadow: 3px 3px 2px rgb(6, 7, 6);
 }
 
 .header_title{
   width: 100%;
-  font-size: clamp(1.6rem, 4vmin, 5vmin);
+  font-size: clamp(1.0rem, 4vmin, 5vmin);
   text-shadow: 1px 2px 1px rgb(1, 37, 26);
   font-family: "Pacifico", "Kaushan Script", Futura, "Roboto", "Trebuchet MS", Helvetica, sans-serif;
   position: relative;
@@ -316,7 +316,7 @@ a[href*="#"]{
   font-weight: bold;
   height: auto;
   border-radius: 20px;
-  box-shadow: 5px 5px 5px 5px gray;
+  box-shadow: 5px 5px 5px 5px rgb(9, 9, 9);
 }
 #codeBlock:hover{
   cursor: text;
@@ -357,8 +357,7 @@ i.fa.fa-comments{
 .highLight{
   background-color: #00BAF0;
 }
-
-/*Header 3d Effect*/
+/*Header 3d Effect*/ 
 .stage {
   height: 30%;
   width: 50%;
@@ -370,6 +369,7 @@ i.fa.fa-comments{
   left: 0;
   perspective: 9999px;
   transform-style: preserve-3d;
+  overflow: visible !important;
 }
 
 .layer {
@@ -378,7 +378,7 @@ i.fa.fa-comments{
   position: absolute;
   transform-style: preserve-3d;
   animation: threeD 5s infinite alternate ease-in-out -7.5s;
-  animation-fill-mode: forwards;
+  animation-fill-mode:  forwards;
   transform: rotateY(30deg) rotateX(33deg) translateZ(0);
 }
 
@@ -392,9 +392,8 @@ i.fa.fa-comments{
   position: absolute;
   top:-13vmin;
   left:-5vmin;
-  color: whitesmoke;
+  color: rgb(20, 18, 18);
   letter-spacing: -2px;
-  text-shadow: 4px 0 10px rgba(209, 198, 198, 0.13);
   font-size: clamp(10vmin, 10vmin, 15vmin);
 }
 
@@ -483,20 +482,20 @@ i.fa.fa-comments{
 }
 
 .layer:nth-child(n+11):after {
-  -webkit-text-stroke: 15px dodgerblue;
-  text-shadow: 6px 0 6px #00366b, 5px 5px 5px #002951, 0 6px 6px #00366b;
+  -webkit-text-stroke: 10px rgb(41, 83, 103);
+  text-shadow: 6px 0 6px #026b62, 5px 5px 5px #002951, 0 6px 6px #00366b;
 }
 
 .layer:nth-child(n+12):after {
-  -webkit-text-stroke: 15px #0077ea;
+  -webkit-text-stroke: 10px #0077ea;
 }
 
 .layer:last-child:after {
-  -webkit-text-stroke: 17px rgba(0, 0, 0, 0.1);
+  -webkit-text-stroke: 13px rgba(0, 0, 0, 0.1);
 }
 
 .layer:first-child:after {
-  color: #fff;
+  color: #77efe9;
   text-shadow: none;
 }
 
@@ -505,6 +504,7 @@ i.fa.fa-comments{
     transform: rotateY(-30deg) rotateX(-30deg);
   }
 }
+
 
 @media only screen and (max-width: 600px){
   .header_title{
